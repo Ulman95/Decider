@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
 
         if (fragment == null) {
 
-            fragment = DeciderFragment()
+            fragment = CoinsFragment()
             supportFragmentManager.beginTransaction().add(R.id.main_container, fragment).commit()
         }
 
