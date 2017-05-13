@@ -6,19 +6,25 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.ulman.decider.R
-import kotlinx.android.synthetic.main.fragment_decider.*
+import com.ulman.decider.mvp.presenter.decider.DeciderPresenter
+import javax.inject.Inject
 
+class DeciderFragment : Fragment(), DeciderView {
 
-class DeciderFragment : Fragment() {
+    @Inject
+    lateinit var presenter: DeciderPresenter
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        return inflater.inflate(R.layout.fragment_decider, container, false)
+        return inflater.inflate(R.layout.fragment_coins, container, false)
     }
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
 
-        text.text = "first"
+    }
+
+    override fun chooseVariant(index: Int) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 }
 

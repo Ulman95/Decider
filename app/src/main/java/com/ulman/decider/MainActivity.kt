@@ -24,8 +24,15 @@ class MainActivity : AppCompatActivity() {
         mainMenu.setOnNavigationItemSelectedListener {
 
             when (it.itemId) {
-                R.id.menu_main_coins -> supportFragmentManager.beginTransaction().replace(R.id.main_container, DeciderFragment()).commit()
-                R.id.menu_main_second -> supportFragmentManager.beginTransaction().replace(R.id.main_container, CoinsFragment()).commit()
+                R.id.menu_main_coins  -> supportFragmentManager
+                        .beginTransaction()
+                        .replace(R.id.main_container, DeciderFragment())
+                        .commit()
+
+                R.id.menu_main_second -> supportFragmentManager
+                        .beginTransaction()
+                        .replace(R.id.main_container, CoinsFragment())
+                        .commit()
             }
 
             return@setOnNavigationItemSelectedListener true
