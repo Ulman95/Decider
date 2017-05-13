@@ -8,7 +8,7 @@ import android.hardware.SensorManager
 
 class ImpactDetector(context: Context) : Detector, SensorEventListener {
 
-    companion object {
+    private companion object {
         const val FREE_FALL_ACCELERATION: Double = 9.81
         const val THRESHOLD: Double = 2.0
         const val TIME: Long = 10
