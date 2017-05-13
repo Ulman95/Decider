@@ -2,4 +2,7 @@
 
     <string name="app_name">Decider</string>
 
+    <string name="menu_bottom_coins">Coins</string>
+    <string name="menu_bottom_second">Second</string>
+
 </resources>
