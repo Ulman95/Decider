@@ -34,6 +34,7 @@ class CoinsFragment : BaseFragment(), CoinsView {
 
     override fun onResume() {
         super.onResume()
+        setPresenter()
         presenter.start()
     }
 
