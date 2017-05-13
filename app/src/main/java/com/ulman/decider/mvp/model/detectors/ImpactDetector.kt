@@ -1,4 +1,4 @@
-package com.ulman.decider.mvp.model
+package com.ulman.decider.mvp.model.detectors
 
 import android.content.Context
 import android.content.Context.SENSOR_SERVICE

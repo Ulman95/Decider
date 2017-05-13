@@ -1,6 +1,6 @@
 package com.ulman.decider.mvp.view.decider
 
-import com.ulman.decider.mvp.model.Choice
+import com.ulman.decider.mvp.model.decider.beans.Choice
 
 interface DeciderView {
 

@@ -1,4 +1,4 @@
-package com.ulman.decider.mvp.model
+package com.ulman.decider.mvp.model.detectors
 
 interface Detector {
 

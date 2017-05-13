@@ -1,10 +1,10 @@
-package com.ulman.decider.mvp.model
+package com.ulman.decider.mvp.model.decider
 
-import java.util.*
+import com.ulman.decider.mvp.model.decider.beans.Choice
 
 class RandomDecider : Decider {
 
-    private val random = Random()
+    private val random = java.util.Random()
 
     override fun makeChoice(elementCount: Int, phraseCount: Int): Choice {
 

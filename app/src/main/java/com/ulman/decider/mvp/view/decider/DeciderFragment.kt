@@ -6,10 +6,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.ulman.decider.R
+import com.ulman.decider.mvp.model.decider.beans.Choice
 import com.ulman.decider.mvp.presenter.decider.DeciderPresenter
 import javax.inject.Inject
 
 class DeciderFragment : Fragment(), DeciderView {
+
+    override fun chooseVariant(choice: Choice) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
 
     @Inject
     lateinit var presenter: DeciderPresenter
@@ -21,10 +26,6 @@ class DeciderFragment : Fragment(), DeciderView {
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
 
-    }
-
-    override fun chooseVariant(index: Int) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 }
 

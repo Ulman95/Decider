@@ -1,20 +1,25 @@
 package com.ulman.decider.mvp.view.coins
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.ulman.decider.AppComponent
 import com.ulman.decider.R
 import com.ulman.decider.mvp.presenter.coins.CoinsChoice
 import com.ulman.decider.mvp.presenter.coins.CoinsChoiceType
 import com.ulman.decider.mvp.presenter.coins.CoinsPresenter
+import com.ulman.decider.mvp.view.BaseFragment
 import kotlinx.android.synthetic.main.fragment_coins.*
 import javax.inject.Inject
 
-class CoinsFragment : Fragment(), CoinsView {
+class CoinsFragment : BaseFragment(), CoinsView {
 
     @Inject lateinit var presenter: CoinsPresenter
+
+    override fun inject(appComponent: AppComponent) {
+        appComponent.getModelComponent().getCoinsComponent().inject(this)
+    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
