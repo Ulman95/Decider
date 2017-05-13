@@ -2,10 +2,11 @@ package com.ulman.decider.mvp.presenter.coins
 
 import com.ulman.decider.mvp.model.decider.Decider
 import com.ulman.decider.mvp.model.detectors.Detector
+import com.ulman.decider.mvp.model.reaction.Reaction
 import com.ulman.decider.mvp.view.coins.CoinsView
 import com.ulman.decider.mvp.view.coins.Phrase
 
-class CoinsPresenter(val decider: Decider, val detector: Detector) {
+class CoinsPresenter(val decider: Decider, val detector: Detector, val reaction: Reaction) {
 
     var view: CoinsView? = null
 
@@ -15,7 +16,7 @@ class CoinsPresenter(val decider: Decider, val detector: Detector) {
     }
 
     fun start() {
-        detector.start { makeChoice() }
+        detector.start { makeChoice(); reaction.reaction() }
     }
 
     fun stop() {
