@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Решатор</string>
+
+    <string name="menu_bottom_coins">Монетка</string>
+    <string name="menu_bottom_second">Решатор</string>
+
+
+    <string name="phrase_coins_yes_1">Да</string>
+    <string name="phrase_coins_yes_2">Скорее всего Да</string>
+    <string name="phrase_coins_yes_3">Точно Да</string>
+    <string name="phrase_coins_yes_4">Я думаю Да</string>
+    <string name="phrase_coins_yes_5">Наверное Да</string>
+    <string name="phrase_coins_yes_6">Конечно Да</string>
+    <string name="phrase_coins_yes_7">ЕС</string>
+
+    <string name="phrase_coins_no_1">Нет</string>
+    <string name="phrase_coins_no_2">Скорее Нет</string>
+    <string name="phrase_coins_no_3">Точно Нет</string>
+    <string name="phrase_coins_no_4">Не</string>
+    <string name="phrase_coins_no_5">Не надо</string>
+    <string name="phrase_coins_no_6">Конечно Нет</string>
+    <string name="phrase_coins_no_7">НОУ</string>
+
+
+</resources>

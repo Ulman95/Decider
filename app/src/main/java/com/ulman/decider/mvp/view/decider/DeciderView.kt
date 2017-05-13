@@ -1,4 +1,8 @@
 package com.ulman.decider.mvp.view.decider
 
+import com.ulman.decider.mvp.model.decider.beans.Choice
 
-class DeciderView
+interface DeciderView {
+
+    fun chooseVariant(choice: Choice)
+}
