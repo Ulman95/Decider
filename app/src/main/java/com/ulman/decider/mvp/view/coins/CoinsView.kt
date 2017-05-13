@@ -5,5 +5,4 @@ import com.ulman.decider.mvp.presenter.coins.CoinsChoice
 interface CoinsView {
 
     fun setChoice(choice: CoinsChoice)
-
 }

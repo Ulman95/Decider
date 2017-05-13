@@ -8,5 +8,4 @@ import dagger.Subcomponent
 interface CoinsComponent {
 
     fun inject(fragment: CoinsFragment)
-
 }

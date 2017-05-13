@@ -5,7 +5,9 @@ import com.ulman.decider.mvp.model.detectors.Detector
 import com.ulman.decider.mvp.view.coins.CoinsView
 import com.ulman.decider.mvp.view.coins.Phrase
 
-class CoinsPresenter(val coinsView: CoinsView, val decider: Decider, val detector: Detector) {
+class CoinsPresenter(val decider: Decider, val detector: Detector) {
+
+    var view: CoinsView? = null
 
     companion object {
         val PHRASE_COUNT = Phrase.COINS_SIZE
@@ -18,12 +20,13 @@ class CoinsPresenter(val coinsView: CoinsView, val decider: Decider, val detecto
 
     fun stop() {
         detector.stop()
+        view = null
     }
 
     private fun makeChoice() {
 
         val choice = decider.makeChoice(CoinsPresenter.VARIANT_COUNT, CoinsPresenter.PHRASE_COUNT)
         val type = if (choice.index == 1) CoinsChoiceType.YES else CoinsChoiceType.NO
-        coinsView.setChoice(CoinsChoice(type, choice.phrase))
+        view?.setChoice(CoinsChoice(type, choice.phrase))
     }
 }

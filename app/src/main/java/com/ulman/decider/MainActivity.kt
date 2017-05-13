@@ -26,12 +26,12 @@ class MainActivity : AppCompatActivity() {
             when (it.itemId) {
                 R.id.menu_main_coins  -> supportFragmentManager
                         .beginTransaction()
-                        .replace(R.id.main_container, DeciderFragment())
+                        .replace(R.id.main_container, CoinsFragment())
                         .commit()
 
                 R.id.menu_main_second -> supportFragmentManager
                         .beginTransaction()
-                        .replace(R.id.main_container, CoinsFragment())
+                        .replace(R.id.main_container, DeciderFragment())
                         .commit()
             }
 

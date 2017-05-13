@@ -14,4 +14,6 @@ abstract class BaseFragment : Fragment() {
     }
 
     abstract fun inject(appComponent: AppComponent)
+
+    abstract fun setPresenter()
 }

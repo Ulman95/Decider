@@ -18,16 +18,18 @@ class CoinsFragment : BaseFragment(), CoinsView {
     @Inject lateinit var presenter: CoinsPresenter
 
     override fun inject(appComponent: AppComponent) {
+
         appComponent.getModelComponent().getCoinsComponent().inject(this)
+    }
+
+    @Inject
+    override fun setPresenter() {
+        presenter.view = this
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
         return inflater.inflate(R.layout.fragment_coins, container, false)
-    }
-
-    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
-
     }
 
     override fun onResume() {

@@ -39,6 +39,7 @@ dependencies {
     // Dagger2
     compile "com.google.dagger:dagger:$dagger_version"
     kapt "com.google.dagger:dagger-compiler:$dagger_version"
+    provided 'org.glassfish:javax.annotation:10.0-b28'
 
     // Shake
     compile 'com.squareup:seismic:1.0.2'
