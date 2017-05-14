@@ -1,6 +1,5 @@
 package com.ulman.decider.mvp.view.coins.dagger
 
-import com.ulman.decider.mvp.presenter.coins.CoinsPresenterModule
 import com.ulman.decider.mvp.view.coins.CoinsFragment
 import dagger.Subcomponent
 

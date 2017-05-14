@@ -6,20 +6,34 @@
     <string name="menu_bottom_second">Decider</string>
 
 
-    <string name="phrase_coins_yes_1">Yes</string>
-    <string name="phrase_coins_yes_2">Yes</string>
-    <string name="phrase_coins_yes_3">Yes</string>
-    <string name="phrase_coins_yes_4">Yes</string>
-    <string name="phrase_coins_yes_5">Yes</string>
-    <string name="phrase_coins_yes_6">Yes</string>
-    <string name="phrase_coins_yes_7">Yes</string>
+    <string-array name="phrase_coins_yes">
 
-    <string name="phrase_coins_no_1">No</string>
-    <string name="phrase_coins_no_2">No</string>
-    <string name="phrase_coins_no_3">No</string>
-    <string name="phrase_coins_no_4">No</string>
-    <string name="phrase_coins_no_5">No</string>
-    <string name="phrase_coins_no_6">No</string>
-    <string name="phrase_coins_no_7">No</string>
+        <item>Yes</item>
+        <item>Yes</item>
+        <item>Yes</item>
+        <item>Yes</item>
+        <item>Yes</item>
+        <item>Yes</item>
+        <item>Yes</item>
+        <item>Yes</item>
+        <item>Yes</item>
+        <item>Yes</item>
+
+    </string-array>
+
+    <string-array name="phrase_coins_no">
+
+        <item>No</item>
+        <item>No</item>
+        <item>No</item>
+        <item>No</item>
+        <item>No</item>
+        <item>No</item>
+        <item>No</item>
+        <item>No</item>
+        <item>No</item>
+        <item>No</item>
+
+    </string-array>
 
 </resources>

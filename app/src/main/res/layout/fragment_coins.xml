@@ -4,11 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient_coins_screen"
     android:gravity="center"
     android:orientation="vertical">
 
     <TextView
         android:id="@+id/phraseField"
+        style="@style/CoinsText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:text="Some text!"
