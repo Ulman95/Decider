@@ -7,9 +7,9 @@ import android.view.ViewGroup
 import com.ulman.decider.AppComponent
 import com.ulman.decider.R
 import com.ulman.decider.mvp.presenter.coins.CoinsChoice
-import com.ulman.decider.mvp.presenter.coins.CoinsChoiceType
 import com.ulman.decider.mvp.presenter.coins.CoinsPresenter
 import com.ulman.decider.mvp.view.BaseFragment
+import com.ulman.decider.utils.changeFont
 import kotlinx.android.synthetic.main.fragment_coins.*
 import javax.inject.Inject
 
@@ -45,8 +45,8 @@ class CoinsFragment : BaseFragment(), CoinsView {
 
     override fun setChoice(choice: CoinsChoice) {
 
-        val text = if (choice.type == CoinsChoiceType.YES) Phrase.COINS_PHRASE_YES[choice.phrase] else Phrase.COINS_PHRASE_NO[choice.phrase]
-        phraseField.text = getString(text)
+        phraseField.text = choice.phrase
+        phraseField.changeFont(choice.font)
     }
 
 }
