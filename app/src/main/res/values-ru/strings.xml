@@ -6,22 +6,35 @@
     <string name="menu_bottom_coins">Монетка</string>
     <string name="menu_bottom_second">Решатор</string>
 
+    <string-array name="phrase_coins_yes">
 
-    <string name="phrase_coins_yes_1">Да</string>
-    <string name="phrase_coins_yes_2">Скорее всего Да</string>
-    <string name="phrase_coins_yes_3">Точно Да</string>
-    <string name="phrase_coins_yes_4">Я думаю Да</string>
-    <string name="phrase_coins_yes_5">Наверное Да</string>
-    <string name="phrase_coins_yes_6">Конечно Да</string>
-    <string name="phrase_coins_yes_7">ЕС</string>
+        <item>Да</item>
+        <item>Скорее всего Да</item>
+        <item>Точно Да</item>
+        <item>Я думаю Да</item>
+        <item>Наверное Да</item>
+        <item>Конечно Да</item>
+        <item>ЕС</item>
+        <item>Даааа</item>
+        <item>Так точно!</item>
+        <item>Конечно</item>
 
-    <string name="phrase_coins_no_1">Нет</string>
-    <string name="phrase_coins_no_2">Скорее Нет</string>
-    <string name="phrase_coins_no_3">Точно Нет</string>
-    <string name="phrase_coins_no_4">Не</string>
-    <string name="phrase_coins_no_5">Не надо</string>
-    <string name="phrase_coins_no_6">Конечно Нет</string>
-    <string name="phrase_coins_no_7">НОУ</string>
+    </string-array>
+
+    <string-array name="phrase_coins_no">
+
+        <item>Нет</item>
+        <item>Скорее Нет</item>
+        <item>Точно Нет</item>
+        <item>Не</item>
+        <item>Не надо</item>
+        <item>Конечно Нет</item>
+        <item>НОУ</item>
+        <item>Нет конечно</item>
+        <item>Неееет</item>
+        <item>Наин</item>
+
+    </string-array>
 
 
 </resources>
