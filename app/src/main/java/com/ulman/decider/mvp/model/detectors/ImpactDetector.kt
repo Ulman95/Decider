@@ -32,7 +32,7 @@ class ImpactDetector(context: Context) : Detector, SensorEventListener {
     override fun start(callback: () -> Unit) {
 
         this.callback = callback
-        sensorManager.registerListener(this, accelerometer, SensorManager.SENSOR_DELAY_NORMAL)
+        sensorManager.registerListener(this, accelerometer, SensorManager.SENSOR_DELAY_FASTEST)
     }
 
     override fun stop() {

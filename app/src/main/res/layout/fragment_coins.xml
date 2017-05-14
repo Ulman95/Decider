@@ -1,19 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_coins_screen"
-    android:gravity="center"
-    android:orientation="vertical">
+    android:background="@drawable/gradient_coins_screen">
+
+    <FrameLayout
+        android:id="@+id/hintContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/hintText"
+            style="@style/CoinsText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/coins_hint"
+            />
+
+    </FrameLayout>
+
 
     <TextView
         android:id="@+id/phraseField"
         style="@style/CoinsText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         tools:text="Some text!"
+        tools:visibility="invisible"
         />
 
-</LinearLayout>
+</FrameLayout>

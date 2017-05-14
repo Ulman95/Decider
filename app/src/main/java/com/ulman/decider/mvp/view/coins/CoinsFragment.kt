@@ -8,6 +8,8 @@ import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import com.ulman.decider.AppComponent
 import com.ulman.decider.R
+import com.ulman.decider.mvp.model.font.AndroidFontContainer
+import com.ulman.decider.mvp.model.font.base.Font
 import com.ulman.decider.mvp.presenter.coins.CoinsChoice
 import com.ulman.decider.mvp.presenter.coins.CoinsPresenter
 import com.ulman.decider.mvp.view.BaseFragment
@@ -38,6 +40,13 @@ class CoinsFragment : BaseFragment(), CoinsView {
         return inflater.inflate(R.layout.fragment_coins, container, false)
     }
 
+    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        hintText.changeFont(object : Font(context.assets) {
+            override fun getPath(): String = AndroidFontContainer.FONTS[3]
+        })
+    }
+
     override fun onResume() {
         super.onResume()
         setPresenter()
@@ -51,11 +60,12 @@ class CoinsFragment : BaseFragment(), CoinsView {
 
     override fun setChoice(choice: CoinsChoice) {
 
+        hintContainer.visibility = View.GONE
+        phraseField.visibility = View.VISIBLE
         phraseField.text = choice.phrase
         phraseField.changeFont(choice.font)
         phraseField.startAnimation(fadeInAnimation)
     }
-
 }
 
 

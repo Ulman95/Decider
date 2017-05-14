@@ -5,6 +5,8 @@
     <string name="menu_bottom_coins">Coins</string>
     <string name="menu_bottom_second">Decider</string>
 
+    <string name="coins_hint">Произнеси вопрос и встряхни телефон</string>
+
 
     <string-array name="phrase_coins_yes">
 
