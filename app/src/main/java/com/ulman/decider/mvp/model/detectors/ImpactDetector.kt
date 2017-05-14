@@ -11,7 +11,7 @@ class ImpactDetector(context: Context) : Detector, SensorEventListener {
     private companion object {
         const val FREE_FALL_ACCELERATION: Double = 9.81
         const val THRESHOLD: Double = 2.0
-        const val TIME: Long = 10
+        const val TIME: Long = 30
         const val SAMPLES = 3
     }
 
@@ -32,7 +32,7 @@ class ImpactDetector(context: Context) : Detector, SensorEventListener {
     override fun start(callback: () -> Unit) {
 
         this.callback = callback
-        sensorManager.registerListener(this, accelerometer, SensorManager.SENSOR_DELAY_FASTEST)
+        sensorManager.registerListener(this, accelerometer, SensorManager.SENSOR_DELAY_NORMAL)
     }
 
     override fun stop() {

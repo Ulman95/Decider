@@ -24,11 +24,11 @@ class AndroidFontContainer(val context: Context) : FontContainer {
             "fonts/ZnikomitNo25.otf"
     )
 
+    override fun getFontCount(): Int = fonts.size
+
     override fun getFont(choice: Choice): Font = object : Font(context.assets) {
 
         override fun getPath(): String = fonts[choice.which]
     }
-
-    override fun getFontCount(): Int = fonts.size
 
 }
