@@ -4,6 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import com.ulman.decider.AppComponent
 import com.ulman.decider.R
 import com.ulman.decider.mvp.presenter.coins.CoinsChoice
@@ -17,6 +19,8 @@ class CoinsFragment : BaseFragment(), CoinsView {
 
     @Inject lateinit var presenter: CoinsPresenter
 
+    private var fadeInAnimation: Animation? = null
+
     override fun inject(appComponent: AppComponent) {
 
         appComponent.getModelComponent().getCoinsComponent().inject(this)
@@ -28,6 +32,8 @@ class CoinsFragment : BaseFragment(), CoinsView {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+
+        fadeInAnimation = AnimationUtils.loadAnimation(activity, R.anim.anim_fade_in)
 
         return inflater.inflate(R.layout.fragment_coins, container, false)
     }
@@ -47,6 +53,7 @@ class CoinsFragment : BaseFragment(), CoinsView {
 
         phraseField.text = choice.phrase
         phraseField.changeFont(choice.font)
+        phraseField.startAnimation(fadeInAnimation)
     }
 
 }
