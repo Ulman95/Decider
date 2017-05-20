@@ -15,13 +15,12 @@ class CoinsPresenter(val interactor: CoinsInteractor, val detector: Detector, va
         detector.start()
                 .throttleFirst(300, TimeUnit.MILLISECONDS)
                 .doOnNext { reaction.reaction() }
-                .subscribe { makeChoice() }
+                .flatMap { interactor.makeChoice() }
+                .subscribe { view?.setChoice(it) }
     }
 
     fun stop() {
         detector.stop()
         view = null
     }
-
-    fun makeChoice() = view?.setChoice(interactor.makeChoice())
 }

@@ -38,11 +38,7 @@ class ImpactDetector(context: Context) : Detector, SensorEventListener {
         return subject
     }
 
-    override fun stop() {
-
-        sensorManager.unregisterListener(this, accelerometer)
-        subject.onComplete()
-    }
+    override fun stop() = sensorManager.unregisterListener(this, accelerometer)
 
     override fun onSensorChanged(event: SensorEvent) {
 
