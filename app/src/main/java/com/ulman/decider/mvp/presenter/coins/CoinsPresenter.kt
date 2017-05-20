@@ -4,17 +4,24 @@ import com.ulman.decider.mvp.model.detectors.Detector
 import com.ulman.decider.mvp.model.interactor.CoinsInteractor
 import com.ulman.decider.mvp.model.reaction.Reaction
 import com.ulman.decider.mvp.view.coins.CoinsView
+import java.util.concurrent.TimeUnit
 
 class CoinsPresenter(val interactor: CoinsInteractor, val detector: Detector, val reaction: Reaction) {
 
     var view: CoinsView? = null
 
-    fun start() = detector.start { makeChoice(); reaction.reaction() }
+    fun start() {
+
+        detector.start()
+                .throttleFirst(300, TimeUnit.MILLISECONDS)
+                .doOnNext { reaction.reaction() }
+                .subscribe { makeChoice() }
+    }
 
     fun stop() {
         detector.stop()
         view = null
     }
 
-    private fun makeChoice() = view?.setChoice(interactor.makeChoice())
+    fun makeChoice() = view?.setChoice(interactor.makeChoice())
 }

@@ -4,9 +4,12 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.ulman.decider.mvp.view.coins.CoinsFragment
 import com.ulman.decider.mvp.view.decider.DeciderFragment
+import com.ulman.decider.utils.FragmentHelper
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+
+    val fragmentHelper: FragmentHelper = FragmentHelper(R.id.main_container, supportFragmentManager)
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -24,15 +27,13 @@ class MainActivity : AppCompatActivity() {
         mainMenu.setOnNavigationItemSelectedListener {
 
             when (it.itemId) {
-                R.id.menu_main_coins  -> supportFragmentManager
-                        .beginTransaction()
-                        .replace(R.id.main_container, CoinsFragment())
-                        .commit()
+                R.id.menu_main_coins  ->
+                    if (supportFragmentManager.findFragmentByTag(CoinsFragment.TAG) != null)
+                        return@setOnNavigationItemSelectedListener true
+                    else
+                        fragmentHelper.replace(CoinsFragment())
 
-                R.id.menu_main_second -> supportFragmentManager
-                        .beginTransaction()
-                        .replace(R.id.main_container, DeciderFragment())
-                        .commit()
+                R.id.menu_main_second -> fragmentHelper.replace(DeciderFragment())
             }
 
             return@setOnNavigationItemSelectedListener true

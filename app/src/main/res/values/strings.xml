@@ -5,11 +5,19 @@
     <string name="menu_bottom_coins">Coins</string>
     <string name="menu_bottom_second">Decider</string>
 
-    <string name="coins_hint">Произнеси вопрос и встряхни телефон</string>
+    <string name="coins_hint">Ask your question and shake</string>
 
 
     <string-array name="phrase_coins_yes">
 
+        <item>Yes</item>
+        <item>Yes</item>
+        <item>Yes</item>
+        <item>Yes</item>
+        <item>Yes</item>
+        <item>Yes</item>
+        <item>Yes</item>
+        <item>Yes</item>
         <item>Yes</item>
         <item>Yes</item>
         <item>Yes</item>
@@ -25,6 +33,14 @@
 
     <string-array name="phrase_coins_no">
 
+        <item>No</item>
+        <item>No</item>
+        <item>No</item>
+        <item>No</item>
+        <item>No</item>
+        <item>No</item>
+        <item>No</item>
+        <item>No</item>
         <item>No</item>
         <item>No</item>
         <item>No</item>

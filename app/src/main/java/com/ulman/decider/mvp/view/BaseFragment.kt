@@ -7,6 +7,11 @@ import com.ulman.decider.AppComponent
 
 abstract class BaseFragment : Fragment() {
 
+    protected companion object {
+
+        const val SHORTCUT_COINS = "com.ulman.decider.COINS"
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -16,4 +21,6 @@ abstract class BaseFragment : Fragment() {
     abstract fun inject(appComponent: AppComponent)
 
     abstract fun setPresenter()
+
+    abstract fun getFragmentTag(): String
 }

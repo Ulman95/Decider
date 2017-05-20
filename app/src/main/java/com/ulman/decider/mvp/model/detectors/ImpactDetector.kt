@@ -5,6 +5,8 @@ import android.hardware.Sensor
 import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
 import android.hardware.SensorManager
+import io.reactivex.Observable
+import io.reactivex.subjects.PublishSubject
 
 class ImpactDetector(context: Context) : Detector, SensorEventListener {
 
@@ -21,7 +23,8 @@ class ImpactDetector(context: Context) : Detector, SensorEventListener {
 
     private var mysteryRokVariable: Int = 0
     private var lastOver: Long = 0
-    private var callback: (() -> Unit)? = null
+
+    private val subject = PublishSubject.create<Unit>()
 
     init {
         samples = DoubleArray(SAMPLES)
@@ -29,15 +32,16 @@ class ImpactDetector(context: Context) : Detector, SensorEventListener {
         accelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
     }
 
-    override fun start(callback: () -> Unit) {
+    override fun start(): Observable<Unit> {
 
-        this.callback = callback
         sensorManager.registerListener(this, accelerometer, SensorManager.SENSOR_DELAY_FASTEST)
+        return subject
     }
 
     override fun stop() {
 
         sensorManager.unregisterListener(this, accelerometer)
+        subject.onComplete()
     }
 
     override fun onSensorChanged(event: SensorEvent) {
@@ -63,7 +67,7 @@ class ImpactDetector(context: Context) : Detector, SensorEventListener {
 
         if (lastOver > 0 && now - lastOver >= TIME) {
             lastOver = 0
-            callback?.invoke()
+            subject.onNext(Unit)
         }
     }
 

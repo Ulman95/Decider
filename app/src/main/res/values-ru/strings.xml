@@ -6,6 +6,9 @@
     <string name="menu_bottom_coins">Монетка</string>
     <string name="menu_bottom_second">Решатор</string>
 
+    <string name="coins_hint">Произнеси вопрос и встряхни телефон</string>
+
+
     <string-array name="phrase_coins_yes">
 
         <item>Да</item>
@@ -18,6 +21,14 @@
         <item>Даааа</item>
         <item>Так точно!</item>
         <item>Конечно</item>
+        <item>Абсолютлю</item>
+        <item>Это точно</item>
+        <item>Доооо</item>
+        <item>Даааааааа</item>
+        <item>Разумеется</item>
+        <item>Я думаю Да</item>
+        <item>Однозначно Да</item>
+        <item>Ну конечно Да</item>
 
     </string-array>
 
@@ -33,6 +44,14 @@
         <item>Нет конечно</item>
         <item>Неееет</item>
         <item>Наин</item>
+        <item>Ну Нееее</item>
+        <item>Нет Нет</item>
+        <item>Неееееееее</item>
+        <item>Нет конечно!</item>
+        <item>Ни в коем случае</item>
+        <item>Ни в коем разе</item>
+        <item>Я думаю Нет</item>
+        <item>Одназначно Нет</item>
 
     </string-array>
 

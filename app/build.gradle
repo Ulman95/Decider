@@ -43,5 +43,8 @@ dependencies {
 
     // Shake
     compile 'com.squareup:seismic:1.0.2'
+
+    // Rx
+    compile 'io.reactivex.rxjava2:rxkotlin:2.0.3'
 }
 

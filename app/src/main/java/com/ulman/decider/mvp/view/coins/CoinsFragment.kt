@@ -23,6 +23,11 @@ class CoinsFragment : BaseFragment(), CoinsView {
 
     private var fadeInAnimation: Animation? = null
 
+    companion object {
+
+        const val TAG = "CoinsFragment"
+    }
+
     override fun inject(appComponent: AppComponent) {
 
         appComponent.getModelComponent().getCoinsComponent().inject(this)
@@ -32,6 +37,8 @@ class CoinsFragment : BaseFragment(), CoinsView {
     override fun setPresenter() {
         presenter.view = this
     }
+
+    override fun getFragmentTag(): String = TAG
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
