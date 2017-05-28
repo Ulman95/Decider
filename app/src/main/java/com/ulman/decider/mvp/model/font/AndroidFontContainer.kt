@@ -22,7 +22,10 @@ class AndroidFontContainer(val context: Context) : FontContainer {
                 "fonts/GUERRILLA-Normal.otf",
                 "fonts/Lionelofparis.ttf",
                 "fonts/TkachenkoSketch4F-Regular.otf",
-                "fonts/ZnikomitNo25.otf"
+                "fonts/ZnikomitNo25.otf",
+                "fonts/BadScript-Regular.ttf",
+                "fonts/MarckScript-Regular.ttf",
+                "fonts/SeymourOne-Regular.ttf"
         )
     }
 
