@@ -26,11 +26,15 @@ class CoinsFragment : BaseFragment(), CoinsView {
     companion object {
 
         const val TAG = "CoinsFragment"
-    }
+        const val SHORTCUT_ACTION = "com.ulman.decider.COINS"
 
-    override fun inject(appComponent: AppComponent) {
-
-        appComponent.getModelComponent().getCoinsComponent().inject(this)
+        fun newInstance(withShortcut: Boolean): CoinsFragment {
+            val bundle = Bundle()
+            val fragment = CoinsFragment()
+            bundle.putBoolean(CoinsFragment.SHORTCUT_ACTION, withShortcut)
+            fragment.arguments = bundle
+            return fragment
+        }
     }
 
     @Inject
@@ -38,12 +42,13 @@ class CoinsFragment : BaseFragment(), CoinsView {
         presenter.view = this
     }
 
+    override fun inject(appComponent: AppComponent) = appComponent.getModelComponent().getCoinsComponent().inject(this)
+
     override fun getFragmentTag(): String = TAG
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
         fadeInAnimation = AnimationUtils.loadAnimation(activity, R.anim.anim_fade_in)
-
         return inflater.inflate(R.layout.fragment_coins, container, false)
     }
 
@@ -52,6 +57,13 @@ class CoinsFragment : BaseFragment(), CoinsView {
         hintText.changeFont(object : Font(context.assets) {
             override fun getPath(): String = AndroidFontContainer.FONTS[3]
         })
+
+        if (arguments == null) {
+            throw RuntimeException("Need to use newInstance method")
+        }
+
+        if (arguments.getBoolean(SHORTCUT_ACTION))
+            presenter.makeChoice()
     }
 
     override fun onResume() {

@@ -1,0 +1,17 @@
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <shortcut
+        android:shortcutId="coins"
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_coins"
+        android:shortcutShortLabel="@string/shortcut_short_label_coins"
+        android:shortcutLongLabel="@string/shortcut_long_label_coins"
+        android:shortcutDisabledMessage="@string/shortcut_disabled_message_coins">
+        <intent
+            android:action="com.ulman.decider.COINS"
+            android:targetPackage="com.ulman.decider"
+            android:targetClass="com.ulman.decider.MainActivity" />
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+
+</shortcuts>

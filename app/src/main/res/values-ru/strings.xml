@@ -54,6 +54,9 @@
         <item>Одназначно Нет</item>
 
     </string-array>
+    <string name="shortcut_disabled_message_coins">Шорткат был удален</string>
+    <string name="shortcut_long_label_coins">Монетка</string>
+    <string name="shortcut_short_label_coins">Монетка</string>
 
 
 </resources>

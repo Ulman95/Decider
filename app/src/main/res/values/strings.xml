@@ -2,14 +2,26 @@
 
     <string name="app_name">Decider</string>
 
-    <string name="menu_bottom_coins">Coins</string>
-    <string name="menu_bottom_second">Decider</string>
-
     <string name="coins_hint">Ask your question and shake</string>
 
 
     <string name="menu_vector_path" translatable="false">M20 30,L80 30,M20 50,L80 50,M20 70,L80 70</string>
     <string name="back_vector_path" translatable="false">M50 25,L80 50,M20 50,L80 50,M50 75,L80 50</string>
+
+
+
+    <!-- Bottom navigation -->
+    <string name="menu_bottom_second">Decider</string>
+    <string name="menu_bottom_coins">Coins</string>
+
+
+
+    <!-- Shortcut -->
+    <string name="shortcut_short_label_coins">Coins</string>
+    <string name="shortcut_long_label_coins">Coins</string>
+    <string name="shortcut_disabled_message_coins">Shortcut was removed</string>
+
+
 
 
     <string-array name="phrase_coins_yes">

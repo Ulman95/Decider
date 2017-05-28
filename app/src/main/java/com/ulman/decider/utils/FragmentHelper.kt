@@ -15,8 +15,23 @@ class FragmentHelper(val containerId: Int, val supportFragmentManager: FragmentM
                 .commit()
     }
 
+    fun add(baseFragment: BaseFragment) {
+
+        if (checkIfOnScreen(baseFragment))
+            return
+
+        supportFragmentManager.beginTransaction()
+                .add(containerId, baseFragment, baseFragment.getFragmentTag())
+                .commit()
+    }
+
     fun checkIfOnScreen(baseFragment: BaseFragment): Boolean {
 
-        return (supportFragmentManager.findFragmentById(containerId) as BaseFragment).getFragmentTag() == baseFragment.getFragmentTag()
+        val fragment = supportFragmentManager.findFragmentById(containerId)
+
+        if (fragment != null && fragment is BaseFragment)
+            return baseFragment.getFragmentTag() == fragment.getFragmentTag()
+        else
+            return false
     }
 }

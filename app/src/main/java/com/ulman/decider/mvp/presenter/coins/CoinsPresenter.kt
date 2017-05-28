@@ -19,6 +19,11 @@ class CoinsPresenter(val interactor: CoinsInteractor, val detector: Detector, va
                 .subscribe { view?.setChoice(it) }
     }
 
+    fun makeChoice() {
+
+        interactor.makeChoice().subscribe { view?.setChoice(it) }
+    }
+
     fun stop() {
         detector.stop()
         view = null
