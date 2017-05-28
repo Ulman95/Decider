@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
             return@setOnNavigationItemSelectedListener true
         }
 
-        main_ic_menu.setOnClickListener {
+        main_ic_menu_container.setOnClickListener {
 
             if (main_ic_menu.drawable === menuToBack) {
                 main_ic_menu.setImageDrawable(backToMenu)
