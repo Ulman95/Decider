@@ -7,8 +7,16 @@ class FragmentHelper(val containerId: Int, val supportFragmentManager: FragmentM
 
     fun replace(baseFragment: BaseFragment) {
 
+        if (checkIfOnScreen(baseFragment))
+            return
+
         supportFragmentManager.beginTransaction()
                 .replace(containerId, baseFragment, baseFragment.getFragmentTag())
                 .commit()
+    }
+
+    fun checkIfOnScreen(baseFragment: BaseFragment): Boolean {
+
+        return (supportFragmentManager.findFragmentById(containerId) as BaseFragment).getFragmentTag() == baseFragment.getFragmentTag()
     }
 }
