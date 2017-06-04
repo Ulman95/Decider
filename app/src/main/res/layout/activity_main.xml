@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/main_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+
+            tools:background="@drawable/gradient_coins_screen"
+            />
+
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/mainMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:menu="@menu/menu_bottom_main"
+            />
+
+    </LinearLayout>
+
+    <!--<FrameLayout-->
+        <!--android:id="@+id/main_ic_menu_container"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="end"-->
+        <!--android:layout_marginEnd="8dp"-->
+        <!--android:layout_marginRight="8dp"-->
+        <!--android:layout_marginTop="42dp"-->
+        <!--android:padding="8dp">-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/main_ic_menu"-->
+            <!--android:layout_width="32dp"-->
+            <!--android:layout_height="32dp"-->
+            <!--app:srcCompat="@drawable/anim_menu_to_back"-->
+            <!--tools:src="@drawable/ic_vector_coins"-->
+            <!--/>-->
+
+    <!--</FrameLayout>-->
+
+</android.support.design.widget.CoordinatorLayout>

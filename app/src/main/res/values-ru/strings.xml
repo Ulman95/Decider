@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Решатор</string>
+
+    <string name="menu_bottom_coins">Монетка</string>
+    <string name="menu_bottom_second">Решатор</string>
+
+    <string name="coins_hint">Произнеси вопрос и встряхни телефон</string>
+
+
+    <string-array name="phrase_coins_yes">
+
+        <item>Да</item>
+        <item>Скорее всего Да</item>
+        <item>Точно Да</item>
+        <item>Я думаю Да</item>
+        <item>Наверное Да</item>
+        <item>Конечно Да</item>
+        <item>ЕС</item>
+        <item>Даааа</item>
+        <item>Так точно!</item>
+        <item>Конечно</item>
+        <item>Абсолютли</item>
+        <item>Это точно</item>
+        <item>Доооо</item>
+        <item>Даааааааа</item>
+        <item>Разумеется</item>
+        <item>Я думаю Да</item>
+        <item>Однозначно Да</item>
+        <item>Ну конечно Да</item>
+
+    </string-array>
+
+    <string-array name="phrase_coins_no">
+
+        <item>Нет</item>
+        <item>Скорее Нет</item>
+        <item>Точно Нет</item>
+        <item>Не</item>
+        <item>Не надо</item>
+        <item>Конечно Нет</item>
+        <item>НОУ</item>
+        <item>Нет конечно</item>
+        <item>Неееет</item>
+        <item>Наин</item>
+        <item>Ну Нееее</item>
+        <item>Нет Нет</item>
+        <item>Неееееееее</item>
+        <item>Нет конечно!</item>
+        <item>Ни в коем случае</item>
+        <item>Ни в коем разе</item>
+        <item>Я думаю Нет</item>
+        <item>Одназначно Нет</item>
+
+    </string-array>
+    <string name="shortcut_disabled_message_coins">Шорткат был удален</string>
+    <string name="shortcut_long_label_coins">Монетка</string>
+    <string name="shortcut_short_label_coins">Монетка</string>
+
+
+</resources>
